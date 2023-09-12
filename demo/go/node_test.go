@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
+	maelstrom "github.com/stefanobaghino/maelstrom/demo/go"
 )
 
 func TestNode_Run(t *testing.T) {
