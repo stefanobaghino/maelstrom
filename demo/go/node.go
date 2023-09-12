@@ -76,6 +76,8 @@ func (n *Node) Handle(typ string, fn HandlerFunc) {
 // the last function executed by main().
 func (n *Node) Run() error {
 	scanner := bufio.NewScanner(n.Stdin)
+	buf := make([]byte, 1024*1024)
+	scanner.Buffer(buf, 1024*1024)
 	for scanner.Scan() {
 		line := scanner.Bytes()
 
